@@ -4,7 +4,13 @@ import entites.*;
 public class TestAdressePostale {
 
 	public static void main(String[] args) {
-		AdressePostale a1 = new AdressePostale();
+		
+		AdressePostale a3 = new AdressePostale(129, "rue des orchidées", 59000, "Lille");
+		
+		
+		/* METHODE AVANT LES CONSTRUCTEURS
+		 * 
+		 * AdressePostale a1 = new AdressePostale();
 		AdressePostale a2 = new AdressePostale();
 		
 		a1.numeroRue = 89;
@@ -15,7 +21,7 @@ public class TestAdressePostale {
 		a2.numeroRue = 111;
 		a2.libelleRue = "rue des tulipes";
 		a2.codePostal = 59000;
-		a2.ville = "Lille";
+		a2.ville = "Lille";*/
 	}
 
 }
