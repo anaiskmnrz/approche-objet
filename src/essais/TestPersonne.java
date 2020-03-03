@@ -6,12 +6,24 @@ public class TestPersonne {
 
 	public static void main(String[] args) {
 		
-		Personne p3 = new Personne("kominiarz","anaïs");
+		Personne p1 = new Personne("kominiarz","anaïs");
 		
-		AdressePostale nouvelleAdresse = new AdressePostale(78,"fjdoil",1456,"dskfdsl");
+		//p1.ModificationAdresse(nouvelleAdresse);
 		
-		ModificationAdresse(nouvelleAdresse);
+		p1.Affichage();
+		p1.setNom("parsis");
+		p1.setAdresse(new AdressePostale(78,"fjdoil",1456,"dskfdsl"));
+		p1.Affichage();
 		
+		
+		String nom1 = p1.getNom();
+		System.out.println(nom1);
+		
+		String prenom1 = p1.getPrenom();
+		System.out.println(prenom1);
+		
+		AdressePostale adr1 = p1.getAdresse();
+		System.out.println(adr1);
 		
 		/* TP2
 		 * 
