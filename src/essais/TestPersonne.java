@@ -7,11 +7,20 @@ public class TestPersonne {
 	public static void main(String[] args) {
 		
 		Personne p3 = new Personne("kominiarz","anaïs");
+		
+		AdressePostale nouvelleAdresse = new AdressePostale(78,"fjdoil",1456,"dskfdsl");
+		
+		ModificationAdresse(nouvelleAdresse);
+		
+		
+		/* TP2
+		 * 
+		 * Personne p3 = new Personne("kominiarz","anaïs");
 		p3.adresse = new AdressePostale(101, "rue des cocquelicots", 59000, "Lille");
 		
 		AdressePostale a4 = new AdressePostale(99, "rue des lilas", 59000, "Lille");
 		Personne p4 = new Personne("dupont", "jean", a4);
-		
+		*/
 		/* METHODE AVANT LES CONSTRUCTEURS.
 		 *  
 		*Personne p1 = new Personne();
