@@ -23,11 +23,13 @@ public class TestBanque {
 		tabComptes[0] = c1;
 		tabComptes[1] = c2;
 		
+		double soldeGlobal = 0; 
+		
 		for (int i = 0; i < 2 ; ++i) {
 			System.out.println(tabComptes[i]);
+			soldeGlobal += tabComptes[i].getSolde();
 		}
 		
-		double soldeGlobal = c1.solde + c2.solde * 1.035;
 		
 		System.out.println("solde global = " + soldeGlobal);
 		

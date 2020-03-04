@@ -11,7 +11,7 @@ public class Compte {
 	/** numero de compte **/
 	private int numero; 
 	/** solde du compte **/
-	public double solde;
+	private double solde;
 	
 	/** Constructeur
 	 * 
@@ -26,6 +26,38 @@ public class Compte {
 	@Override
 	public String toString() {
 		return "Numéro de compte : " + numero + ", Solde = " + solde + " euros";
+	}
+
+	/** Getter
+	 *
+	 * @return the numero
+	 */
+	public int getNumero() {
+		return numero;
+	}
+
+	/** Setter
+	 *
+	 * @param numero the numero to set
+	 */
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	/** Getter
+	 *
+	 * @return the solde
+	 */
+	public double getSolde() {
+		return solde;
+	}
+
+	/** Setter
+	 *
+	 * @param solde the solde to set
+	 */
+	public void setSolde(double solde) {
+		this.solde = solde;
 	}
 	
 }

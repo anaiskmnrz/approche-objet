@@ -13,6 +13,12 @@ public class CompteTaux extends Compte{
 	/** taux de remuneration du compte **/
 	double tauxRemuneration; 
 	
+	/** Constructeur
+	 *
+	 * @param numero numéro de compte
+	 * @param solde solde du compte
+	 * @param tauxRemuneration taux de rémunération du compte
+	 */
 	public CompteTaux(int numero, double solde, double tauxRemuneration) {
 		super(numero, solde);
 		this.tauxRemuneration = tauxRemuneration;
@@ -20,8 +26,23 @@ public class CompteTaux extends Compte{
 	
 	@Override
 	public String toString() {
-		String id = super.toString();
-		return id + ", Taux de rémunération = " + tauxRemuneration + "%";
+		return super.toString() + ", Taux de rémunération = " + tauxRemuneration + "%";
+	}
+
+	/** Getter
+	 *
+	 * @return the tauxRemuneration
+	 */
+	public double getTauxRemuneration() {
+		return tauxRemuneration;
+	}
+
+	/** Setter
+	 *
+	 * @param tauxRemuneration the tauxRemuneration to set
+	 */
+	public void setTauxRemuneration(double tauxRemuneration) {
+		this.tauxRemuneration = tauxRemuneration;
 	}
 
 }
