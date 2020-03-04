@@ -1,20 +1,28 @@
 package fr.diginamic.banque.entites;
 
-public class Compte {
-
-	private int numCompte; 
-	private int soldeCompte;
+/**
+ * Représentation d'un compte bancaire
+ * @author KOMINIARZ Anaïs
+ *
+ */
+public class Compte { 
+	private int numero; 
+	private int solde;
 	
 	/**
 	 * Constructeur
 	 * 
-	 * @param numCompte 	le numéro de compte
-	 * @param soldeCompte 	le solde du compte	
+	 * @param numero	le numéro de compte
+	 * @param solde 	le solde du compte	
 	 */
-	public Compte(int numCompte, int soldeCompte) {
-		this.numCompte = numCompte;
-		this.soldeCompte = soldeCompte;
+	public Compte(int numero, int solde) {
+		this.numero = numero;
+		this.solde = solde;
 	}
 	
+	@Override
+	public String toString() {
+		return "Numéro de compte : " + numero + ", Solde = " + solde + " euros.";
+	}
 	
 }
