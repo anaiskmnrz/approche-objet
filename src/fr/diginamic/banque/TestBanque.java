@@ -9,6 +9,7 @@ public class TestBanque {
 		
 		System.out.println(c1);
 		
+		/* On constate que c'est une String qui est affichée et non le n° et solde du compte. */
 	}
 
 }
