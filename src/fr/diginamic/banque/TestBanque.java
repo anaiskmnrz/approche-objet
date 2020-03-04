@@ -27,7 +27,7 @@ public class TestBanque {
 		
 		for (int i = 0; i < 2 ; ++i) {
 			System.out.println(tabComptes[i]);
-			soldeGlobal += tabComptes[i].getSolde();
+			soldeGlobal += tabComptes[i].getSoldeInitial();
 		}
 		
 		

@@ -29,22 +29,26 @@ public class TestOperation {
 		double soldeGlobal = 0;
 		
 		for (int i = 0; i < operations.length; ++i) {
-			String type = operations[i].afficherType();
+			/*String type = operations[i].afficherType();
 			double montant = operations[i].getMontant();
 			System.out.print(type);
 			System.out.print(operations[i].getDate() + " ");
 			System.out.print(montant + "\n");
+			*/
 			
-			if (type == "Débit :  ") {
-				soldeGlobal -= montant;
+			/* utilise toString pour l'affichage. */
+			System.out.println(operations[i]);
+			
+			if (operations[i].afficherType().equals("Débit :  ")) {
+				soldeGlobal -= operations[i].getMontant();
 			}
-			if (type == "Crédit : ") {
-				soldeGlobal += montant;
+			if (operations[i].afficherType().equals("Crédit : ")) {
+				soldeGlobal += operations[i].getMontant();
 			}
 			//System.out.println(operations[i]);
 		}
 		
-		System.out.println("\n Solde global = " + soldeGlobal);
+		System.out.println("\nSolde global = " + soldeGlobal);
 
 	}
 

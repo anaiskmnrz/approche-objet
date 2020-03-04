@@ -11,21 +11,21 @@ public class Compte {
 	/** numero de compte **/
 	private int numero; 
 	/** solde du compte **/
-	private double solde;
+	private double soldeInitial;
 	
 	/** Constructeur
 	 * 
 	 * @param numero	le numéro de compte
 	 * @param solde 	le solde du compte	
 	 */
-	public Compte(int numero, double solde) {
+	public Compte(int numero, double soldeInitial) {
 		this.numero = numero;
-		this.solde = solde;
+		this.soldeInitial = soldeInitial;
 	}
 	
 	@Override
 	public String toString() {
-		return "Numéro de compte : " + numero + ", Solde = " + solde + " euros";
+		return "Numéro de compte : " + numero + ", Solde initial = " + soldeInitial + " euros";
 	}
 
 	/** Getter
@@ -48,16 +48,16 @@ public class Compte {
 	 *
 	 * @return the solde
 	 */
-	public double getSolde() {
-		return solde;
+	public double getSoldeInitial() {
+		return soldeInitial;
 	}
 
 	/** Setter
 	 *
 	 * @param solde the solde to set
 	 */
-	public void setSolde(double solde) {
-		this.solde = solde;
+	public void setSoldeInitial(double soldeInitial) {
+		this.soldeInitial = soldeInitial;
 	}
 	
 }

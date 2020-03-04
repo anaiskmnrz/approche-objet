@@ -11,11 +11,21 @@ package fr.diginamic.banque.entites;
 public abstract class Operation {
 
 	/** date de l'opération **/
-	String date; 
+	private String date; 
 	/** montant de l'opération **/
-	double montant;
+	private double montant;
 	
+	/**
+	 * @return le type de l'opération bancaire: Crédit ou Débit
+	 */
+	/* Pour avoir une méthode générique d'affichage placée dans la classe mère
+	 * avec nos variables qui restent private. */
 	public abstract String afficherType();
+	
+
+	public String toString() {
+		return afficherType() + date + ", " + montant + " euros.";
+	}
 	
 	/** Constructeur
 	 *
