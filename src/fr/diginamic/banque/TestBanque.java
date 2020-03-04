@@ -1,6 +1,12 @@
 package fr.diginamic.banque;
 import fr.diginamic.banque.entites.Compte;
 
+/**
+ * Test de la classe Compte
+ * 
+ * @author KOMINIARZ Anaïs
+ *
+ */
 public class TestBanque {
 
 	public static void main(String[] args) {
@@ -10,6 +16,8 @@ public class TestBanque {
 		System.out.println(c1);
 		
 		/* On constate que c'est une String qui est affichée et non le n° et solde du compte. */
+		
+		/* Avec la redefinition de toString c'est OK. */
 	}
 
 }

@@ -1,16 +1,19 @@
 package fr.diginamic.banque.entites;
 
-/**
- * Représentation d'un compte bancaire
+
+/** Représentation d'un compte bancaire
+ *
  * @author KOMINIARZ Anaïs
  *
  */
 public class Compte { 
+	
+	/** numero de compte **/
 	private int numero; 
+	/** solde du compte **/
 	private int solde;
 	
-	/**
-	 * Constructeur
+	/** Constructeur
 	 * 
 	 * @param numero	le numéro de compte
 	 * @param solde 	le solde du compte	
