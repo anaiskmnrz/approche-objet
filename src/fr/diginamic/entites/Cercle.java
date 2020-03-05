@@ -10,6 +10,7 @@ package fr.diginamic.entites;
  */
 public class Cercle {
 
+	/** rayon du cercle **/
 	private double rayon;
 
 	/**
