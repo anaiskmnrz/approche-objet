@@ -16,7 +16,6 @@ public class AffichageForme {
 	 et affiche le périmètre de la forme ainsi que sa surface.*/
 	
 	public static void afficher(Forme forme) {
-		System.out.println("Surface : " + forme.calculerSurface());
-		System.out.println("Périmètre : " + forme.calculerPerimetre());
+		System.out.println("Surface : " + forme.calculerSurface() + "\nPérimètre : " + forme.calculerPerimetre());
 	}
 }

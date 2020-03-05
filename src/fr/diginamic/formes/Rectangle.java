@@ -23,6 +23,7 @@ public class Rectangle extends Forme {
 		return (largeur + longueur) * 2;
 	}
 
+	
 	/** Constructeur
 	 *
 	 * @param largeur	largeur du rectangle
