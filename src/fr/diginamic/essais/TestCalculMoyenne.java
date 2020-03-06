@@ -5,10 +5,12 @@ public class TestCalculMoyenne {
 
 	public static void main(String[] args) {
 		
-		double[] t1 = new double[0];
+		CalculMoyenne calcul = new CalculMoyenne();
 		
-		
-		
+		System.out.println();
+		calcul.ajout(5);
+		calcul.ajout(10);
+		System.out.println(calcul.moyenne());
 
 	}
 

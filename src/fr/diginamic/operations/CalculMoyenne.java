@@ -11,13 +11,16 @@ import fr.diginamic.maison.Piece;
  *
  */
 public class CalculMoyenne {
-	
-	public double[] tableau;
 
+	/** tableau où vont être stockés les nombres pour la moyenne **/
+	private double[] tableau;
+
+	/**
+	 * @param nouveau nouveau nombre à ajouter dans tableau
+	 */
 	public void ajout(double nouveau) {
 		
-		int tableau_length = tableau.length;
-
+		int tableau_length = tableau.length; 
 		double[] tableauCopy = new double[tableau_length + 1];
 		for (int i = 0; i < tableau_length ; ++i) {
 			tableauCopy[i] = tableau[i];
@@ -27,6 +30,9 @@ public class CalculMoyenne {
 		tableau[tableau.length-1] = nouveau;
 	}
 	
+	/**
+	 * @return la moyenne des nombres dans tableau
+	 */
 	public double moyenne() {
 		
 		double moyenne = 0;
@@ -34,6 +40,13 @@ public class CalculMoyenne {
 			moyenne += tableau[i];
 		}
 		return moyenne/tableau.length;
+	}
+	
+	/** Constructeur
+	 *
+	 */
+	public CalculMoyenne() {
+		tableau = new double[0];
 	}
 
 

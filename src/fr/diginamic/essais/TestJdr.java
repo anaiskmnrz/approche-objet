@@ -31,11 +31,12 @@ public class TestJdr {
 		Personnage p = new Personnage();
 		
 		while (sortir == false) {
-			
-			System.out.print("\nVeuillez choisir une option en indiquant le numéro correspondant : ");
-			Scanner saisie = new Scanner(System.in);
-			int option = saisie.nextInt();
-			
+			int option = 0;
+			while (option != 1 && option != 2 && option !=3 && option !=4 ) {
+				System.out.print("\nVeuillez choisir une option en indiquant le numéro correspondant : ");
+				Scanner saisie = new Scanner(System.in);
+				option = saisie.nextInt();
+			}
 			if (option == 1) {
 				p = new Personnage();
 				
@@ -44,6 +45,9 @@ public class TestJdr {
 				if (p.getScore() < 0) {
 					 System.out.println("Votre personnage est décédé. Il a obtenu le score de " + p.getScore() + " points. Veuillez créer un nouveau personnage");
 				} else {
+					//Creature l = new Creature();
+				
+					
 					int nombre = new Random().nextInt(3)+1;
 					if ( nombre == 1) {
 						
