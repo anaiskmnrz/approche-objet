@@ -10,8 +10,8 @@ package fr.diginamic.maison;
  */
 public class Chambre extends Piece {
 
-	public Chambre(Piece[] tableauPiece, double superficie, int etage) {
-		super(tableauPiece, superficie, etage);
+	public Chambre(double superficie, int etage) {
+		super(superficie, etage);
 	}
 
 

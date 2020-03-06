@@ -45,10 +45,42 @@ public class TestJdr {
 				if (p.getScore() < 0) {
 					 System.out.println("Votre personnage est décédé. Il a obtenu le score de " + p.getScore() + " points. Veuillez créer un nouveau personnage");
 				} else {
-					//Creature l = new Creature();
-				
+					Creature creature = new Creature();
+					creature.creerCreature();
+					//System.out.println("---> Attaque contre un Loup ");
 					
-					int nombre = new Random().nextInt(3)+1;
+					while ((creature.getVie() > 0) || (creature.getVie() > 0)) {
+						int attaqueCreature = creature.getAttaque();
+						int attaqueP = p.getAttaque();
+						
+						if (attaqueP > attaqueCreature) {
+							creature.setVie(creature.getVie()-(attaqueP-attaqueCreature));
+							if (creature.getVie() <= 0) {
+								if (creature.getNom() == "loup") {
+									p.setScore(p.getScore() + 1);
+								}
+								if (creature.getNom() == "gobelin") {
+									p.setScore(p.getScore() + 2);
+								}
+								if (creature.getNom() == "troll") {
+									p.setScore(p.getScore() + 5);
+								}
+								System.out.println("Le personnage a gagné le combat. Score = " + p.getScore() + " points.");
+								break;
+							}
+						}
+						if (attaqueP < attaqueCreature) {
+							p.setVie(p.getVie()-(attaqueCreature-attaqueP));
+							if (p.getVie() <= 0) {
+								System.out.println("Le personnage a perdu le combat. Score = " + p.getScore() + " points.");
+								sortir = true;
+								break;
+							}	
+						}
+					}
+				}
+					
+					/*int nombre = new Random().nextInt(3)+1;
 					if ( nombre == 1) {
 						
 						Loup loup = new Loup();
@@ -130,7 +162,7 @@ public class TestJdr {
 							}
 						}
 					}
-				}
+				}*/
 			}
 			if (option == 3) {
 				System.out.println("Le score du personnage est de " + p.getScore() + " points.");

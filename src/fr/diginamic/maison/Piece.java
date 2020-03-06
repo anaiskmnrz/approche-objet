@@ -21,10 +21,13 @@ public class Piece extends Maison {
 	 * @param superficie
 	 * @param etage
 	 */
-	public Piece(Piece[] tableauPiece, double superficie, int etage) {
-		super(tableauPiece);
-		this.superficie = superficie;
-		this.etage = etage;
+	public Piece(double superficie, int etage) {
+		if (etage < 0 || superficie <0) {
+			System.out.println("L'étage ou la superficie ne peuvent pas être négatifs. ");
+		} else {
+			this.superficie = superficie;
+			this.etage = etage;
+		}
 	}
 	
 	/** Getter
