@@ -3,6 +3,8 @@
  */
 package fr.diginamic.operations;
 
+import fr.diginamic.maison.Piece;
+
 /** Représentation du calcul d'une moyenne
  *
  * @author KOMINIARZ Anaïs
@@ -10,18 +12,19 @@ package fr.diginamic.operations;
  */
 public class CalculMoyenne {
 	
-	public double[] tableau = new double [5];
+	public double[] tableau;
 
-	public void ajout(int index, double nouveau) {
-		tableau[index] = nouveau;
+	public void ajout(double nouveau) {
 		
-		if (index >= tableau.length) {
-				double[] arrayCopy = new double[index+1];
-				for (int i = 0; i < index ; ++i) {
-					arrayCopy[i] = tableau[i];
-				}
-				tableau = arrayCopy; 	
+		int tableau_length = tableau.length;
+
+		double[] tableauCopy = new double[tableau_length + 1];
+		for (int i = 0; i < tableau_length ; ++i) {
+			tableauCopy[i] = tableau[i];
 		}
+		tableau = tableauCopy; 	
+		
+		tableau[tableau.length-1] = nouveau;
 	}
 	
 	public double moyenne() {
@@ -32,11 +35,7 @@ public class CalculMoyenne {
 		}
 		return moyenne/tableau.length;
 	}
-	/** Constructeur par défaut
-	 *
-	 */
-	public CalculMoyenne() {
-	}
+
 
 	/** Getter
 	 *

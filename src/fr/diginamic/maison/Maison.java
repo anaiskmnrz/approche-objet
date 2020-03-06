@@ -15,12 +15,14 @@ public class Maison {
 	public void ajouterPiece(Piece piece) {
 		
 		int tableauPiece_length = tableauPiece.length;
-
+		System.out.println("tabpieces length = " + tableauPiece_length);
 		Piece[] tableauPieceCopy = new Piece[tableauPiece_length + 1];
-		for (int i = 0; i < tableauPiece_length ; ++i) {
+		System.out.println("tabpieces length copy = " + tableauPieceCopy.length);
+		for (int i = 0; i < tableauPiece_length; ++i) {
 			tableauPieceCopy[i] = tableauPiece[i];
 		}
 		tableauPiece = tableauPieceCopy; 	
+		System.out.println("tabpieces length after = " + tableauPiece.length);
 		
 		tableauPiece[tableauPiece.length-1] = piece;
 		
@@ -45,7 +47,7 @@ public class Maison {
 
 	/** Constructeur
 	 *
-	 * @param tableauPiece
+	 * @param tableauPiece est un tableau de pièces 
 	 */
 	public Maison(Piece[] tableauPiece) {
 		this.tableauPiece = tableauPiece;
