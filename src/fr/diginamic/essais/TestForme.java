@@ -21,7 +21,7 @@ public class TestForme {
 		System.out.println("\nRectangle " );
 		AffichageForme.afficher(f2);
 		
-		Carre f3 = new Carre(2,2);
+		Carre f3 = new Carre(2);
 		System.out.println("\nCarré " );
 		AffichageForme.afficher(f3);
 	

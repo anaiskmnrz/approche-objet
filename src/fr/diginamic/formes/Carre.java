@@ -20,8 +20,8 @@ public class Carre extends Rectangle {
 	 */
 	
 	/* Pourquoi juste pas carre(2) ? pcq c'est une extension de rectangle? */
-	public Carre(double largeur, double longueur) {
-		super(longueur, largeur);
+	public Carre(double longueur) {
+		super(longueur, longueur);
 		this.longueur = longueur;
 	}
 	
