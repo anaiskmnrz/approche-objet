@@ -17,14 +17,21 @@ public class Creature {
 	private int force;
 	private String nom; 
 	
+	
+	
 	/** Constructeur
 	 *
-	 * @param nombre
+	 * @param vie
+	 * @param force
+	 * @param nom
 	 */
- 	public Creature() {
- 		
+	public Creature( String nom, int vie, int force) {
+		super();
+		this.vie = vie;
+		this.force = force;
+		this.nom = nom;
 	}
-	
+
 	public void creerCreature() {
 		int nombre = new Random().nextInt(3)+1;
 		if (nombre == 1) {

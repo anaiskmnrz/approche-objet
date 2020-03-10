@@ -44,6 +44,7 @@ public class Ville {
 		}
 		System.out.println("Ville la plus peuplée : " + maxVille);
 		
+		/*ville la moins peuplée*/
 		int index = 0;
 		int min = ville1.getNombreHabitants();
 		for (int i = 0; i < liste.size(); ++i) {
