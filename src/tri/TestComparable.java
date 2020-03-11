@@ -38,7 +38,6 @@ public class TestComparable {
 		/*for (Pays pays : liste) {
 			System.out.println(pays);
 		}*/
-		
 		//avec comparator
 		Collections.sort(liste, new ComparatorHabitant());
 		for (Pays pays : liste) {

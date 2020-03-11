@@ -12,7 +12,7 @@ import java.util.Random;
  */
 public class CreatureFactory {
 
-	public Creature creerCreature() {
+	public static Creature creerCreature() {
 		int nombre = new Random().nextInt(3)+1;
 		if (nombre == 1) {
 			return new Loup();
@@ -23,5 +23,6 @@ public class CreatureFactory {
 		if (nombre == 3) {
 			return new Troll();
 		}
+		return null; 
 	}
 }

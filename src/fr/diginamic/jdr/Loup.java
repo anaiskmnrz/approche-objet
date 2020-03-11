@@ -16,7 +16,7 @@ public class Loup extends Creature {
 	 *
 	 */
 	public Loup() {
-		super("loup", new Random().nextInt(6)+3, new Random().nextInt(6)+5);
+		super("loup", new Random().nextInt(6)+3, new Random().nextInt(6)+5, 1);
 		System.out.println("Attaque contre un loup");
 	}
 

@@ -16,7 +16,7 @@ public class Creature {
 	private int vie;
 	private int force;
 	private String nom; 
-	
+	private int score;
 	
 	
 	/** Constructeur
@@ -25,36 +25,12 @@ public class Creature {
 	 * @param force
 	 * @param nom
 	 */
-	public Creature( String nom, int vie, int force) {
+	public Creature( String nom, int vie, int force, int score) {
 		super();
 		this.vie = vie;
 		this.force = force;
 		this.nom = nom;
-	}
-
-	public void creerCreature() {
-		int nombre = new Random().nextInt(3)+1;
-		if (nombre == 1) {
-			new Loup();
-			nom = "loup";
-			System.out.println("Attaque contre un loup");
-			force = new Random().nextInt(6)+3;
-			vie = new Random().nextInt(6)+5;
-		}
-		if (nombre == 2) {
-			new Gobelin();
-			nom = "gobelin";
-			System.out.println("Attaque contre un gobelin");
-			force = new Random().nextInt(6)+5;
-			vie = new Random().nextInt(6)+10;
-		}
-		if (nombre == 3) {
-			new Troll();
-			nom = "troll";
-			System.out.println("Attaque contre un troll");
-			force = new Random().nextInt(6)+10;
-			vie = new Random().nextInt(11)+20;
-		}
+		this.setScore(score);
 	}
 
 	/** Getter
@@ -107,6 +83,14 @@ public class Creature {
 	 */
 	public void setNom(String nom) {
 		this.nom = nom;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
 	}
 
 	//public abstract int getAttaque();*/
