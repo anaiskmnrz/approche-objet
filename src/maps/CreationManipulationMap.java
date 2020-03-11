@@ -18,7 +18,7 @@ public class CreationManipulationMap {
 	 */
 	public static void main(String[] args) {
 		 
-		//Creation de la HashMap
+		//Création de la HashMap
 		HashMap<Integer, String> mapVilles = new HashMap<>();   
 		mapVilles.put(13, "Marseille");   
 		mapVilles.put(34, "Montpellier");   

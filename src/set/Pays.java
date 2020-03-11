@@ -10,7 +10,7 @@ import java.text.DecimalFormat;
  * @author KOMINIARZ Anaïs
  *
  */
-public class Pays {
+public class Pays implements Comparable<Pays>{
 
 	/** nom du pays **/
 	private String nom;
@@ -18,19 +18,7 @@ public class Pays {
 	private int nbHabitants;
 	/** pib par habitant du pays **/
 	private int pibHabitant;
-	
-	/**
-	 * @return le PIB total du pays
-	 */
-	public long getPibTotal() {
-		return (long) nbHabitants * (long)pibHabitant; 
-	}
-	
-	@Override
-	public String toString() {
-		DecimalFormat formatter = new DecimalFormat("#,##0");
-		return nom + ", nombre d'habitants : " + formatter.format(nbHabitants) + ", pib total : " +formatter.format(getPibTotal());
-	}
+
 	
 	/** Constructeur
 	 *
@@ -42,6 +30,27 @@ public class Pays {
 		this.nom = nom;
 		this.nbHabitants = nbHabitants;
 		this.pibHabitant = pibHabitant;
+	}
+	
+	/**
+	 * @return le PIB total du pays
+	 */
+	public long getPibTotal() {
+		return (long) nbHabitants * (long)pibHabitant; 
+	}
+	
+	@Override
+	public int compareTo(Pays pays2) {
+		// tri par nom
+		//return this.nom.compareTo(pays2.getNom()); 
+		//tri par pib/hab
+		return pibHabitant - pays2.getPibHabitant();
+	}
+	
+	@Override
+	public String toString() {
+		DecimalFormat formatter = new DecimalFormat("#,##0");
+		return nom + ", nombre d'habitants : " + formatter.format(nbHabitants) + ", pib/hab : " + formatter.format(pibHabitant)+  ", pib total : " +formatter.format(getPibTotal());
 	}
 
 	/** Getter

@@ -55,9 +55,12 @@ public class MapPays {
 		
 		// Affichage des pays restants
 		System.out.print("Voici les pays restants : ");
-		for (String pays : map.keySet()) {
-			System.out.print(pays + " ");
+		for (Pays pays : map.values()) {
+			System.out.println(pays);
 		}
+		/*for (String pays : map.keySet()) {
+			System.out.print(pays + " ");
+		}*/
 		
 
 	}
