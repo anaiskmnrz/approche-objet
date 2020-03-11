@@ -21,7 +21,23 @@ public class TestSetString {
 		
 		HashSet<String> set = new HashSet<>(Arrays.asList("USA", "France", "Allemagne", "UK", "Italie", "Japon", "Chine", "Russie", "Inde" ));
 
+		String ville = null;
+		int nbMax = 0;
+		String grandeVille = null; 
 		Iterator<String> iterator = set.iterator();
+		while(iterator.hasNext()) {
+			ville = iterator.next();
+			if (ville.length() > nbMax) {
+				grandeVille = ville;
+				nbMax = ville.length();
+			}
+		}
+		System.out.println("Grande ville = " + grandeVille + "\n");
+		set.remove(grandeVille);
+		
+		for (String ville1 : set) {
+			System.out.println(ville1);
+		}
 	}
 
 }
