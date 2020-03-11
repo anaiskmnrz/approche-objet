@@ -3,6 +3,8 @@
  */
 package set;
 
+import java.text.DecimalFormat;
+
 /** Représentation d'un pays
  *
  * @author KOMINIARZ Anaïs
@@ -26,7 +28,8 @@ public class Pays {
 	
 	@Override
 	public String toString() {
-		return nom + ", nombre d'habitants : " + nbHabitants + ", pib total : " + getPibTotal();
+		DecimalFormat formatter = new DecimalFormat("#,##0");
+		return nom + ", nombre d'habitants : " + formatter.format(nbHabitants) + ", pib total : " +formatter.format(getPibTotal());
 	}
 	
 	/** Constructeur

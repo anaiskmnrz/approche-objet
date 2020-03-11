@@ -44,7 +44,7 @@ public class TestPays {
 		}
 		System.out.println("Pays avec le + grand PIB/hab : " + paysPib);
 
-		//recherche du pays avec le + grand pib + suppression du pays avec le + petit pib
+		//recherche du pays avec le + grand pib + mis en MAJ et suppression du pays avec le + petit pib
 		long pibMin = Long.MAX_VALUE;
 		Pays paysPibMin= null;
 		long pibMaxx = 0;
@@ -61,8 +61,11 @@ public class TestPays {
 			}
 		}
 		System.out.println("Pays avec le + grand PIB : " + paysPib + "\n");
+		paysPibMin.setNom(paysPibMin.getNom().toUpperCase());
 		
+		System.out.println(paysPibMin + "\n");
 		pays.remove(paysPibMin);
+		
 		
 		// affichage des pays avec le nom, le nombre d'habitants et le pib total
 		for (Pays listePays : pays) {
