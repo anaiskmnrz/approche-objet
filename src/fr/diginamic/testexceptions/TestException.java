@@ -22,7 +22,7 @@ public class TestException {
 			double c = Operation.diviser(a,b);
 			System.out.println(c);
 		}
-		catch (Exception e) {
+		catch (DivException e) {
 			System.out.println(e.getMessage());
 		}
 

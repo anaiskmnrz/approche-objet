@@ -16,9 +16,9 @@ public class Operation {
 	 * @return la division de a/b
 	 * @throws Exception
 	 */
-	public static double diviser(double a, double b) throws Exception {
+	public static double diviser(double a, double b) throws DivException {
 		if (b == 0) {
-			throw new Exception("b ne peut pas être nul.");
+			throw new DivException("b ne peut pas être nul.");
 		}
 		return a/b;
 	}
