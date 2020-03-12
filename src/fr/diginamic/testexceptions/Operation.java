@@ -21,6 +21,12 @@ public class Operation {
 			throw new Exception("b ne peut pas être nul.");
 		}
 		return a/b;
-		
+	}
+	
+	public static double diviserRuntime(double a, double b) {
+		if (b == 0) {
+			throw new RuntimeException("b ne peut pas être nul.");
+		}
+		return a/b;
 	}
 }
