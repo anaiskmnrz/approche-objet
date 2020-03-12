@@ -72,6 +72,9 @@ public class TestPays {
 			System.out.println(listePays);
 		}
 		
+		//test méthode equals
+		System.out.println("france = russie ? " + france.equals(russie));
+		System.out.println("france = france ? " + france.equals(france));
 	}
 
 }

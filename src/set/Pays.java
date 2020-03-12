@@ -40,6 +40,15 @@ public class Pays implements Comparable<Pays>{
 	}
 	
 	@Override
+	public boolean equals(Object object) { 
+		if (!(object instanceof Pays)) {
+		return false;
+		} 
+		Pays other = (Pays) object;
+		return nom.equals(other.getNom());
+		}
+	
+	@Override
 	public int compareTo(Pays pays2) {
 		// tri par nom
 		//return this.nom.compareTo(pays2.getNom()); 
