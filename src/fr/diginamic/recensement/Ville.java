@@ -144,6 +144,5 @@ public class Ville {
 		this.populationTotale = populationTotale;
 	}
 	
-	//Ville ville = new Ville(codeRegion, nomRegion, codeDepartement, codeCommune, nomCommune, populationTotale);
 	
 }

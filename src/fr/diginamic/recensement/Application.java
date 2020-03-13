@@ -108,10 +108,9 @@ public class Application {
 		for (int i = 0; i < 10; ++i) {
 			System.out.print(villesHerault.get(i) + " ");
 		}
-
+		// population totale occitanie
 		System.out.println("\nPopulation totale Occitanie : " + popOccitanieMax);
 
-		// population totale occitanie
 		TreeMap<Integer, String> popOccitanie = new TreeMap<>();
 
 		// 10 + grandes villes occitanie
