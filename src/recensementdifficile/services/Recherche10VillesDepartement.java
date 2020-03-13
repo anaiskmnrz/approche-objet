@@ -10,7 +10,7 @@ import java.util.TreeMap;
 import fr.diginamic.recensement.Ville;
 import recensementdifficile.Recensement;
 
-/** Représentation 
+/** Recherche des 10 villes les plus peuplées d'un département donné 
  *
  * @author KOMINIARZ Anaïs
  *
@@ -21,7 +21,7 @@ public class Recherche10VillesDepartement extends MenuService {
 	public void traiter(Recensement recensement, Scanner scanner) {
 		TreeMap<Integer, String> populationDepartement = new TreeMap<>();
 		
-		//Scanner saisie = new Scanner(System.in);
+		
 		String departement = scanner.nextLine();
 		for (Ville ville : recensement.getRecensement()) {
 			String nom = ville.getNomCommune();
@@ -34,11 +34,10 @@ public class Recherche10VillesDepartement extends MenuService {
 		ArrayList<String> villesDepartement = new ArrayList<>();
 		villesDepartement.addAll(populationDepartement.values());
 
-		System.out.print("les 10 villes les + peuplées du département " + departement + " : (+ grand au + petit) ");
+		System.out.print("les 10 villes les + peuplées du département " + departement + " (+ peuplée au - peuplée) : \n");
 		for (int i = villesDepartement.size() - 1; i > villesDepartement.size() - 11; --i) {
-			System.out.print(villesDepartement.get(i) + " ");
+			System.out.println(villesDepartement.get(i));
 		}
-		System.out.println("\n");
 		
 	}
 

@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 import fr.diginamic.recensement.Ville;
 
-/** Représentation d'un département
+/** Représentation de tous les départements de France
  *
  * @author KOMINIARZ Anaïs
  *
@@ -13,12 +13,15 @@ public class Departements {
 
 	private HashMap<String, Integer> populationDepartements;
 	
+	
 	/** Constructeur
 	 *
-	 * @param nomRegion nom de la région
+	 * @param recensement recensement contient une liste avec toutes les villes de France
 	 */
 	public Departements(Recensement recensement) {
 
+		populationDepartements = new HashMap<>();
+		
 		for (Ville ville : recensement.getRecensement()) {
 			String departement = ville.getCodeDepartement();
 			Integer pop = ville.getPopulationTotale();

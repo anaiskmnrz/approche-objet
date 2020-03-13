@@ -34,6 +34,8 @@ public class Personnage {
 		force = new Random().nextInt(7)+12;
 		vie = new Random().nextInt(31)+20;
 		score = 0;
+		System.out.println("\n***** NOUVEAU PERSONNAGE *****");
+		System.out.println("      FORCE "+ force + " --- VIE " +vie);
 	}
 
 	public int getAttaque() {

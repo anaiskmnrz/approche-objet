@@ -9,7 +9,7 @@ import java.util.TreeMap;
 import recensementdifficile.Departements;
 import recensementdifficile.Recensement;
 
-/** Représentation 
+/** Recherche des 10 départements les + peuplés en France
  *
  * @author KOMINIARZ Anaïs
  *
@@ -33,7 +33,7 @@ public class Recherche10Departements extends MenuService {
 				ArrayList<String> popDepFINAL = new ArrayList<>();
 				popDepFINAL.addAll(popDepTri.values());
 
-				System.out.print("\nles 10 départements les + peuplées de France : (+ grand au + petit) ");
+				System.out.print("\nles 10 départements les + peuplées de France (+ peuplé au moins peuplé) : ");
 				for (int i = popDepFINAL.size() - 1; i > popDepFINAL.size() - 11; --i) {
 					System.out.print(popDepFINAL.get(i) + " ");
 				}

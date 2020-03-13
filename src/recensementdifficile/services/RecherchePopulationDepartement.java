@@ -5,7 +5,7 @@ import java.util.Scanner;
 import fr.diginamic.recensement.Ville;
 import recensementdifficile.Recensement;
 
-/** Représentation 
+/** Recherche de la population d'un département donné
  *
  * @author KOMINIARZ Anaïs
  *
@@ -21,7 +21,7 @@ public class RecherchePopulationDepartement extends MenuService {
 				populationDepartement += ville.getPopulationTotale();
 			}
 		}
-		System.out.println("Population du département : " + populationDepartement);
+		System.out.println("Population du département "+ departement + " : " + populationDepartement +  " habitants");
 		
 	}
 

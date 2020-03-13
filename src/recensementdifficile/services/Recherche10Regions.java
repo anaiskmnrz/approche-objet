@@ -12,7 +12,7 @@ import java.util.TreeMap;
 import recensementdifficile.Recensement;
 import recensementdifficile.Regions;
 
-/** Représentation 
+/** Recherche des 10 régions les + peuplées en France
  *
  * @author KOMINIARZ Anaïs
  *
@@ -21,19 +21,6 @@ public class Recherche10Regions extends MenuService {
 
 	@Override
 	public void traiter(Recensement recensement, Scanner scanner) {
-		
-				/*HashMap<String, Integer> populationRegions = new HashMap<>();
-				
-				for (Ville ville : recensement.getRecensement()) {
-					String region = ville.getNomRegion();
-					Integer pop = ville.getPopulationTotale();
-					
-					if (populationRegions.containsKey(region)) {
-						pop += populationRegions.get(region);
-					}
-					populationRegions.put(region, pop);
-					
-				}*/
 		
 				Regions regions = new Regions(recensement);
 				HashMap<String, Integer> populationRegions = regions.getPopulationRegions();
@@ -49,11 +36,10 @@ public class Recherche10Regions extends MenuService {
 				ArrayList<String> popRegionsFINAL = new ArrayList<>();
 				popRegionsFINAL.addAll(popRegionsTri.values());
 
-				System.out.print("\nles 10 régions les + peuplées de France : (+ grand au + petit) ");
+				System.out.print("\nles 10 régions les + peuplées de France (+ peuplée au - peuplée) : \n");
 				for (int i = popRegionsFINAL.size() - 1; i > popRegionsFINAL.size() - 11; --i) {
-					System.out.print(popRegionsFINAL.get(i) + " ");
+					System.out.println(popRegionsFINAL.get(i));
 				}
-				System.out.println("\n");
 		
 	}
 

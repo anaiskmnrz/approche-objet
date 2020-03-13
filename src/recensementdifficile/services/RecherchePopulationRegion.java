@@ -8,7 +8,7 @@ import java.util.Scanner;
 import fr.diginamic.recensement.Ville;
 import recensementdifficile.Recensement;
 
-/** Représentation 
+/** Recherche de la population d'une région donnée
  *
  * @author KOMINIARZ Anaïs
  *
@@ -24,7 +24,7 @@ public class RecherchePopulationRegion extends MenuService {
 				populationRegion += ville.getPopulationTotale();
 			}
 		}
-		System.out.println("Population de la région : " + populationRegion);
+		System.out.println("Population de la région " + region + ": " + populationRegion + " habitants");
 		
 	}
 

@@ -7,7 +7,7 @@ import java.util.TreeMap;
 import fr.diginamic.recensement.Ville;
 import recensementdifficile.Recensement;
 
-/** Représentation 
+/** Recherche des 10 villes les plus peuplées d'une région donnée  
  *
  * @author KOMINIARZ Anaïs
  *
@@ -19,7 +19,6 @@ public class Recherche10VillesRegion extends MenuService {
 		
 		TreeMap<Integer, String> populationRegion = new TreeMap<>();
 		
-		//Scanner saisie = new Scanner(System.in);
 		String region = scanner.nextLine();
 		for (Ville ville : recensement.getRecensement()) {
 			String nom = ville.getNomCommune();
@@ -32,11 +31,10 @@ public class Recherche10VillesRegion extends MenuService {
 		ArrayList<String> villesRegion = new ArrayList<>();
 		villesRegion.addAll(populationRegion.values());
 
-		System.out.print("les 10 villes les + peuplées de la région " + region + " : (+ grand au + petit) ");
+		System.out.print("les 10 villes les + peuplées de la région " + region + "(+ peuplée au - peuplée) : \n");
 		for (int i = villesRegion.size() - 1; i > villesRegion.size() - 11; --i) {
-			System.out.print(villesRegion.get(i) + " ");
+			System.out.println(villesRegion.get(i));
 		}
-		System.out.println("\n");
 		
 	}
 

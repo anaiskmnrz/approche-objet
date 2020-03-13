@@ -4,20 +4,23 @@ import java.util.HashMap;
 
 import fr.diginamic.recensement.Ville;
 
-/** Représentation 
+/** Représentation de toutes les régions de France
  *
  * @author KOMINIARZ Anaïs
  *
  */
 public class Regions {
 	
-	//private String codeRegion;
-	//private String nomRegion;
-	private HashMap<String, Integer> populationRegions; 
-	
 
+	private HashMap<String, Integer> populationRegions; 	
+
+	/** Constructeur
+	 *
+	 * @param recensement recensement contient une liste avec toutes les villes de France
+	 */
 	public Regions(Recensement recensement) {
 		
+		populationRegions = new HashMap<>();
 		for (Ville ville : recensement.getRecensement()) {
 			String region = ville.getNomRegion();
 			Integer pop = ville.getPopulationTotale();

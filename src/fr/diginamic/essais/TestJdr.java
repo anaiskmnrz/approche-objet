@@ -77,53 +77,6 @@ public class TestJdr {
 					}
 				}
 
-				/*
-				 * int nombre = new Random().nextInt(3)+1; if ( nombre == 1) {
-				 * 
-				 * Loup loup = new Loup(); System.out.println("---> Attaque contre un Loup ");
-				 * 
-				 * while ((loup.getVie() > 0) || (p.getVie() > 0)) { int attaqueLoup =
-				 * loup.getAttaque(); int attaqueP = p.getAttaque();
-				 * 
-				 * if (attaqueP > attaqueLoup) {
-				 * loup.setVie(loup.getVie()-(attaqueP-attaqueLoup)); if (loup.getVie() <= 0) {
-				 * p.setScore(p.getScore() + 1);
-				 * System.out.println("Le personnage a gagné le combat. Son score est de " +
-				 * p.getScore() + " points."); break; } } if (attaqueP < attaqueLoup) {
-				 * p.setVie(p.getVie()-(attaqueLoup-attaqueP)); if (p.getVie() <= 0) {
-				 * System.out.println("Le personnage a perdu le combat. Son score est de " +
-				 * p.getScore() + " points."); sortir = true; break; } } } } if ( nombre == 2) {
-				 * 
-				 * Gobelin gobelin = new Gobelin();
-				 * System.out.println("---> Attaque contre un Gobelin ");
-				 * 
-				 * while ((gobelin.getVie() > 0) || (p.getVie() > 0)) { int attaqueGobelin =
-				 * gobelin.getAttaque(); int attaqueP = p.getAttaque();
-				 * 
-				 * if (attaqueP > attaqueGobelin) {
-				 * gobelin.setVie(gobelin.getVie()-(attaqueP-attaqueGobelin)); if
-				 * (gobelin.getVie() <= 0) { p.setScore(p.getScore() + 2);
-				 * System.out.println("Le personnage a gagné le combat. Son score est de " +
-				 * p.getScore() + " points."); break; } } if (attaqueP < attaqueGobelin) {
-				 * p.setVie(p.getVie()-(attaqueGobelin-attaqueP)); if (p.getVie() <= 0) {
-				 * System.out.println("Le personnage a perdu le combat. Son score est de " +
-				 * p.getScore() + " points."); sortir = true; break; } } } } if ( nombre == 3) {
-				 * 
-				 * Troll troll = new Troll();
-				 * System.out.println("---> Attaque contre un Troll ");
-				 * 
-				 * while ((troll.getVie() > 0) || (p.getVie() > 0)) { int attaqueTroll =
-				 * troll.getAttaque(); int attaqueP = p.getAttaque();
-				 * 
-				 * if (attaqueP > attaqueTroll) {
-				 * troll.setVie(troll.getVie()-(attaqueP-attaqueTroll)); if (troll.getVie() <=
-				 * 0) { p.setScore(p.getScore() + 5);
-				 * System.out.println("Le personnage a gagné le combat. Son score est de " +
-				 * p.getScore() + " points."); break; } } if (attaqueP < attaqueTroll) {
-				 * p.setVie(p.getVie()-(attaqueTroll-attaqueP)); if (p.getVie() <= 0) {
-				 * System.out.println("Le personnage a perdu le combat. Son score est de " +
-				 * p.getScore() + " points."); sortir = true; break; } } } } }
-				 */
 			}
 			if (option == 3) {
 				System.out.println("Le score du personnage est de " + p.getScore() + " points.");

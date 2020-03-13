@@ -12,7 +12,7 @@ import org.apache.commons.io.FileUtils;
 
 import fr.diginamic.recensement.Ville;
 
-/** Représentation 
+/** Répresentation de toutes les villes de France
  *
  * @author KOMINIARZ Anaïs
  *

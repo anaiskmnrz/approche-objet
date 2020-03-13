@@ -8,7 +8,7 @@ import java.util.Scanner;
 import fr.diginamic.recensement.Ville;
 import recensementdifficile.Recensement;
 
-/** Représentation 
+/** Recherche de la population d'une ville
  *
  * @author KOMINIARZ Anaïs
  *
@@ -20,7 +20,7 @@ public class RecherchePopulationVille extends MenuService{
 		String nomVille = scanner.nextLine();
 		for (Ville ville : recensement.getRecensement()) {
 			if (ville.getNomCommune().equals(nomVille)) {
-				System.out.println("Population de " + nomVille + " : " + ville.getPopulationTotale());
+				System.out.println("Population de " + nomVille + " : " + ville.getPopulationTotale() + " habitants");
 			}
 		}
 	}
