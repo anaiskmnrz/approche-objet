@@ -63,7 +63,12 @@ public class Application {
 					System.out.println("\nDe quelle ville souhaitez-vous la population ?(1ere lettre en MAJ et le reste en min)");
 					Scanner saisie1 = new Scanner(System.in);
 					RecherchePopulationVille recherche1 = new RecherchePopulationVille();
+				try {
 					recherche1.traiter(recensement, saisie1);
+				} catch (NomVilleException e) {
+					// TODO Auto-generated catch block
+					e.getMessage();
+				}
 					break;
 				case 2:
 					System.out.println("\nDe quelle département souhaitez-vous la population ?(code du département)");
@@ -72,7 +77,7 @@ public class Application {
 					recherche2.traiter(recensement, saisie2);
 					break;
 				case 3:
-					System.out.println("\nDe quelle région souhaitez-vous la population ?(nom de la région)");
+					System.out.println("\nDe quelle région souhaitez-vous la population ?(nom de la région, 1ere lettre en MAJ)");
 					Scanner saisie3 = new Scanner(System.in);
 					RecherchePopulationRegion recherche3 = new RecherchePopulationRegion();
 					recherche3.traiter(recensement, saisie3);

@@ -3,6 +3,8 @@
  */
 package fr.diginamic.maison;
 
+import exceptions.PieceException;
+
 /** Représentation de la pièce chambre
  *
  * @author KOMINIARZ Anaïs
@@ -10,7 +12,7 @@ package fr.diginamic.maison;
  */
 public class Chambre extends Piece {
 
-	public Chambre(double superficie, int etage) {
+	public Chambre(double superficie, int etage) throws PieceException {
 		super(superficie, etage);
 	}
 

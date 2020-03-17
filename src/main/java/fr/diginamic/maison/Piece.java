@@ -3,6 +3,8 @@
  */
 package fr.diginamic.maison;
 
+import exceptions.PieceException;
+
 /** Représentation d'une pièce
  *
  * @author KOMINIARZ Anaïs
@@ -20,10 +22,11 @@ public class Piece extends Maison {
 	 * @param tableauPiece
 	 * @param superficie
 	 * @param etage
+	 * @throws PieceException 
 	 */
-	public Piece(double superficie, int etage) {
-		if (etage < 0 || superficie <0) {
-			System.out.println("L'étage ou la superficie ne peuvent pas être négatifs. ");
+	public Piece(double superficie, int etage) throws PieceException {
+		if (etage < 0 || superficie < 0) {
+			throw new PieceException("L'étage ou la superficie ne peuvent pas être négatifs. ");
 		} else {
 			this.superficie = superficie;
 			this.etage = etage;

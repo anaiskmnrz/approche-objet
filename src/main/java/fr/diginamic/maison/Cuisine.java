@@ -3,6 +3,8 @@
  */
 package fr.diginamic.maison;
 
+import exceptions.PieceException;
+
 /** Représentation de la pièce cuisine
  *
  * @author KOMINIARZ Anaïs
@@ -10,7 +12,7 @@ package fr.diginamic.maison;
  */
 public class Cuisine extends Piece {
 
-	public Cuisine(double superficie, int etage) {
+	public Cuisine(double superficie, int etage) throws PieceException {
 		super(superficie, etage);
 	}
 

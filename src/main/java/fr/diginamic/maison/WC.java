@@ -3,6 +3,8 @@
  */
 package fr.diginamic.maison;
 
+import exceptions.PieceException;
+
 /** Représentation de la pièce WC
  *
  * @author KOMINIARZ Anaïs
@@ -10,7 +12,7 @@ package fr.diginamic.maison;
  */
 public class WC extends Piece {
 
-	public WC(double superficie, int etage) {
+	public WC(double superficie, int etage) throws PieceException {
 		super(superficie, etage);
 	}
 

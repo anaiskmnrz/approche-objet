@@ -3,6 +3,7 @@
  */
 package fr.diginamic.essais;
 
+import exceptions.PieceException;
 import fr.diginamic.maison.*;
 
 /** Test de la création d'une maison
@@ -14,8 +15,9 @@ public class TestMaison {
 
 	/**
 	 * @param args
+	 * @throws PieceException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws PieceException {
 	
 	Maison m1 = new Maison();
 	
@@ -36,10 +38,21 @@ public class TestMaison {
 	System.out.println("Superficie étage 0 = " + m1.superficieEtage(0));
 	System.out.println("Superficie étage 1 = " + m1.superficieEtage(1) + "\n");
 
-	m1.ajouterPiece(null);
-	Chambre ch2 = new Chambre(-9,1);
-	Chambre ch3 = new Chambre (14,-1);
-
+	try {
+		m1.ajouterPiece(null);
+	} catch (PieceException e) {
+		System.out.println("Voici le message d'erreur affiché : " + e.getMessage());
+	}
+	try {
+		Chambre ch2 = new Chambre(-9,1);
+	} catch (PieceException e) {
+		System.out.println("Voici le message d'erreur affiché : " + e.getMessage());
+	}
+	try {
+		Chambre ch3 = new Chambre (14,-1);
+	} catch (PieceException e) {
+		System.out.println("Voici le message d'erreur affiché : " + e.getMessage());
 	}
 
+	}
 }

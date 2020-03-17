@@ -3,6 +3,8 @@
  */
 package fr.diginamic.maison;
 
+import exceptions.PieceException;
+
 /** Représentation de la maison
  *
  * @author KOMINIARZ Anaïs
@@ -12,7 +14,7 @@ public class Maison {
 
 	private Piece[] tableauPiece;
 	
-	public void ajouterPiece(Piece piece) {
+	public void ajouterPiece(Piece piece) throws PieceException {
 		if (piece != null ) {
 			int tableauPiece_length = tableauPiece.length;
 			Piece[] tableauPieceCopy = new Piece[tableauPiece_length + 1];
@@ -23,7 +25,7 @@ public class Maison {
 		
 			tableauPiece[tableauPiece.length-1] = piece;
 		} else {
-			System.out.println("On ne peut pas ajouter de pièces de type null. ");
+			throw new PieceException("On ne peut pas ajouter de pièces de type null. ");
 		}
 	}
 	
@@ -59,6 +61,22 @@ public class Maison {
 	 */
 	public Maison() {
 		tableauPiece = new Piece[0];
+	}
+
+	/** Getter
+	 *
+	 * @return the tableauPiece
+	 */
+	public Piece[] getTableauPiece() {
+		return tableauPiece;
+	}
+
+	/** Setter
+	 *
+	 * @param tableauPiece the tableauPiece to set
+	 */
+	public void setTableauPiece(Piece[] tableauPiece) {
+		this.tableauPiece = tableauPiece;
 	}
 	
 }
